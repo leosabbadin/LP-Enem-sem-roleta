@@ -1,7 +1,7 @@
 
 'use client';
 
-import { CircleDollarSign, Flame, Gift, TicketPercent } from 'lucide-react';
+import { CircleDollarSign, Flame, TicketPercent } from 'lucide-react';
 import { CtaButton } from './cta-button';
 import { Highlight } from './highlight';
 import { SectionTitle } from './section-title';
@@ -51,12 +51,11 @@ export function InvestmentSection() {
         </SectionTitle>
         <div className="mt-8 flex flex-col items-center gap-2 rounded-2xl border border-amber-400/50 bg-amber-400/10 p-4">
           <div className="flex items-center gap-2 font-bold text-amber-300">
-            <Gift className="size-5" />
-            <span>Presente Especial</span>
+            <Flame className="size-5" />
+            <span>Oferta Especial Liberada!</span>
           </div>
           <p className="text-center text-white/90">
-            Um presente para você: 50% OFF garantido! <br />
-            Quer testar sua sorte para um prêmio ainda maior?
+            Aproveite mais de 75% de desconto por tempo limitado.
           </p>
         </div>
 

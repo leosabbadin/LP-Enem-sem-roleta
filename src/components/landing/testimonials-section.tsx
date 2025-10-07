@@ -55,8 +55,8 @@ export function TestimonialsSection() {
               </CarouselItem>
             ))}
           </CarouselContent>
-          <CarouselPrevious className="ml-12 hidden sm:flex" />
-          <CarouselNext className="mr-12 hidden sm:flex" />
+          <CarouselPrevious className="ml-12" />
+          <CarouselNext className="mr-12" />
         </Carousel>
       </div>
     </section>

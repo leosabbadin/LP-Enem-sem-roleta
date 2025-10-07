@@ -1,24 +1,23 @@
+
+'use client';
+
 import { TrendingUp } from 'lucide-react';
-import { cn } from '@/lib/utils';
+import Image from 'next/image';
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from '@/components/ui/carousel';
 import { SectionTitle } from './section-title';
 
 export function TestimonialsSection() {
   const testimonials = [
-    {
-      quote:
-        'Eu nunca passava de 600 pontos. Com o método, subi para 920. A IA me mostrou exatamente onde errava.',
-      author: 'Maria Clara, 18 anos',
-    },
-    {
-      quote:
-        'Sempre travava na conclusão. O guia de intervenção me salvou. Hoje escrevo sem medo.',
-      author: 'João Pedro, 17 anos',
-    },
-    {
-      quote:
-        'O banco de temas é ouro. Acertei no simulado e bati 980 na escola.',
-      author: 'Ana Beatriz, 19 anos',
-    },
+    'https://raw.githubusercontent.com/leosabbadin/imagem/6f07e79859b98373d89691006aee3f95e4c6218a/5.png',
+    'https://raw.githubusercontent.com/leosabbadin/imagem/6f07e79859b98373d89691006aee3f95e4c6218a/7.png',
+    'https://raw.githubusercontent.com/leosabbadin/imagem/6f07e79859b98373d89691006aee3f95e4c6218a/8.png',
+    'https://raw.githubusercontent.com/leosabbadin/imagem/6f07e79859b98373d89691006aee3f95e4c6218a/9.png',
   ];
 
   return (
@@ -30,37 +29,36 @@ export function TestimonialsSection() {
         </div>
       </SectionTitle>
 
-      <div className="mt-8 grid gap-6 md:grid-cols-3">
-        {testimonials.map((testimonial, index) => (
-          <TestimonialPill as="blockquote" key={index} className="p-6">
-            <p>🗣️ “{testimonial.quote}”</p>
-            <footer className="mt-3 font-semibold">— {testimonial.author}</footer>
-          </TestimonialPill>
-        ))}
+      <div className="mt-8 flex justify-center">
+        <Carousel
+          opts={{
+            align: 'start',
+            loop: true,
+          }}
+          className="w-full max-w-xs sm:max-w-xl md:max-w-2xl lg:max-w-4xl"
+        >
+          <CarouselContent>
+            {testimonials.map((src, index) => (
+              <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+                <div className="p-1">
+                  <div className="overflow-hidden rounded-lg">
+                    <Image
+                      src={src}
+                      alt={`Depoimento de aluno ${index + 1}`}
+                      width={400}
+                      height={800}
+                      className="aspect-[9/16] w-full object-cover"
+                      data-ai-hint="student testimonial"
+                    />
+                  </div>
+                </div>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+          <CarouselPrevious className="ml-12 hidden sm:flex" />
+          <CarouselNext className="mr-12 hidden sm:flex" />
+        </Carousel>
       </div>
     </section>
-  );
-}
-
-// A modified Pill component to allow changing the root element
-function TestimonialPill({
-  children,
-  className,
-  as: Comp = 'div',
-}: {
-  children: React.ReactNode;
-  className?: string;
-  as?: 'div' | 'blockquote';
-}) {
-  return (
-    <Comp
-      className={cn(
-        'rounded-2xl p-5 text-[#101223] shadow-[0_10px_30px_rgba(17,17,17,.08)]',
-        'bg-gradient-to-b from-[rgba(255,255,255,0.88)] to-[rgba(255,255,255,0.92)] [backdrop-filter:blur(6px)]',
-        className
-      )}
-    >
-      {children}
-    </Comp>
   );
 }

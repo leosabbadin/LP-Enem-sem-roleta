@@ -26,7 +26,7 @@ export function TestimonialsSection() {
       <SectionTitle>
         <div className="flex items-center gap-3">
           <TrendingUp className="size-8 text-primary" /> O que nossos alunos
-          dizem após 15 dias
+          dizem:
         </div>
       </SectionTitle>
 

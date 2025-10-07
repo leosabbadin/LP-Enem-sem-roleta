@@ -94,17 +94,17 @@ export function BonusSection() {
           </p>
           <p className="mt-4 text-base md:text-lg text-white/80">MAS HOJE, POR APENAS:</p>
           <div
-            className="font-headline text-5xl font-extrabold tracking-tight sm:text-6xl"
+            className="font-headline text-6xl font-extrabold tracking-tight sm:text-7xl"
             style={{ textShadow: '0 8px 25px rgba(252, 211, 77, 0.4)' }}
           >
             <Highlight>
-              <span className="text-3xl sm:text-4xl">R$</span>22,00
+              <span className="text-4xl sm:text-5xl">R$</span>22,00
             </Highlight>
           </div>
         </div>
 
-        <div className="mt-6 rounded-xl bg-green-500/10 p-3 md:p-4 ring-1 ring-inset ring-green-500/20">
-          <p className="font-bold text-sm md:text-base text-white">
+        <div className="mt-6 rounded-xl bg-green-500/10 p-3 ring-1 ring-inset ring-green-500/20 md:p-4">
+          <p className="font-bold text-white text-sm md:text-base">
             Isso mesmo, você economiza{' '}
             <span className="text-green-300">R$ 360,90</span> (mais de 94% de
             desconto) levando tudo hoje!

@@ -1,3 +1,4 @@
+
 import { Gift, Target } from 'lucide-react';
 import { CtaButton } from './cta-button';
 import { Pill } from './pill';
@@ -5,15 +6,15 @@ import { SectionTitle } from './section-title';
 
 export function BonusSection() {
   const bonuses = [
-    '📚 Banco Aristocrata de Temas (100 prováveis para 2025)',
-    '🧠 50 Frases de Filosofia e Sociologia',
-    '🛠️ Guia de Propostas de Intervenção',
-    '🗺️ Mapa Mental Estrutura Nota 1000',
-    '📘 E-book: Erros que Zeram a Redação',
-    '🔗 Banco de Conectores e Variações Linguísticas',
-    '✅ Checklist de Revisão Rápida',
-    '📝 Simulado Aristocrata 2025 (3 propostas inéditas)',
-    '⚡ Mini-Aula Motivacional Pré-Prova',
+    { text: '📚 Banco Aristocrata de Temas (100 prováveis para 2025)', value: 47 },
+    { text: '🧠 50 Frases de Filosofia e Sociologia', value: 27 },
+    { text: '🛠️ Guia de Propostas de Intervenção', value: 37 },
+    { text: '🗺️ Mapa Mental Estrutura Nota 1000', value: 27 },
+    { text: '📘 E-book: Erros que Zeram a Redação', value: 37 },
+    { text: '🔗 Banco de Conectores e Variações Linguísticas', value: 27 },
+    { text: '✅ Checklist de Revisão Rápida', value: 17 },
+    { text: '📝 Simulado Aristocrata 2025 (3 propostas inéditas)', value: 47 },
+    { text: '⚡ Mini-Aula Motivacional Pré-Prova', value: 27 },
   ];
 
   return (
@@ -30,7 +31,12 @@ export function BonusSection() {
       <ul className="mt-8 grid gap-4 md:grid-cols-2">
         {bonuses.map((bonus, index) => (
           <li key={index}>
-            <Pill className="h-full shine-effect">{bonus}</Pill>
+            <Pill className="h-full shine-effect flex flex-col p-4">
+              <span>{bonus.text}</span>
+              <span className="mt-1 text-sm italic text-white/60">
+                (Valor: R$ {bonus.value.toFixed(2).replace('.', ',')})
+              </span>
+            </Pill>
           </li>
         ))}
       </ul>

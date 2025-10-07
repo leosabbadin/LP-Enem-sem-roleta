@@ -57,9 +57,10 @@ export function InvestmentSection() {
           style={{ textShadow: '0 10px 30px rgba(252, 211, 77, 0.4)' }}
         >
           <Highlight>
-            <span className="text-4xl sm:text-5xl md:text-6xl">R$</span>45,00
+            <span className="text-4xl sm:text-5xl md:text-6xl">R$</span>22,00
           </Highlight>
         </div>
+        <p className="text-lg font-semibold text-white/90">no Pix</p>
         
         <div className="mt-4 rounded-lg bg-pink-600/20 px-4 py-3 text-sm font-bold shadow-lg">
           <p className="font-bold">🎯 GIRE A ROLETA E ARRISQUE-SE A GANHAR MAIS DESCONTO!</p>

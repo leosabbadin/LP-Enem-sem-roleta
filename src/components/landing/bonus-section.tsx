@@ -94,11 +94,11 @@ export function BonusSection() {
           </p>
           <p className="mt-2 text-sm text-white/80 md:mt-4 md:text-lg">MAS HOJE, POR APENAS:</p>
           <div
-            className="font-headline text-5xl font-extrabold tracking-tight sm:text-7xl"
+            className="font-headline text-6xl font-extrabold tracking-tight sm:text-7xl"
             style={{ textShadow: '0 8px 25px rgba(252, 211, 77, 0.4)' }}
           >
             <Highlight>
-              <span className="text-3xl sm:text-5xl">R$</span>22,00
+              <span className="text-4xl sm:text-5xl">R$</span>22,00
             </Highlight>
           </div>
         </div>

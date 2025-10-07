@@ -1,11 +1,29 @@
 
-import { Gift, Target, Check } from 'lucide-react';
+'use client';
+
+import { Gift, Target, Check, Clock } from 'lucide-react';
 import { CtaButton } from './cta-button';
 import { Pill } from './pill';
 import { SectionTitle } from './section-title';
 import { Highlight } from './highlight';
+import { useState, useEffect } from 'react';
+
+const COUNTDOWN_SECONDS = 5 * 60; // 5 minutes
 
 export function BonusSection() {
+  const [timeLeft, setTimeLeft] = useState(COUNTDOWN_SECONDS);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setTimeLeft((prevTime) => (prevTime > 0 ? prevTime - 1 : 0));
+    }, 1000);
+
+    return () => clearInterval(timer);
+  }, []);
+
+  const minutes = Math.floor(timeLeft / 60);
+  const seconds = timeLeft % 60;
+
   const bonuses = [
     { text: '📚 Banco Aristocrata de Temas (100 prováveis para 2025)', value: 47 },
     { text: '🧠 50 Frases de Filosofia e Sociologia', value: 27 },
@@ -90,6 +108,17 @@ export function BonusSection() {
             Isso mesmo, você economiza{' '}
             <span className="text-green-300">R$ 360,90</span> (mais de 94% de
             desconto) levando tudo hoje!
+          </p>
+        </div>
+
+        <div className="my-6 rounded-lg bg-red-600/20 px-4 py-3 text-sm font-bold shadow-lg">
+          <div className="flex items-center justify-center gap-2">
+            <Clock className="size-5 text-red-300" />
+            <p className="font-bold text-red-300">A OFERTA ACABA EM</p>
+          </div>
+          <p className="font-mono text-2xl tracking-widest text-white">
+            {String(minutes).padStart(2, '0')}:
+            {String(seconds).padStart(2, '0')}
           </p>
         </div>
 

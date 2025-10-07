@@ -73,7 +73,6 @@ export function InvestmentSection() {
             <span className="text-4xl sm:text-5xl md:text-6xl">R$</span>22,00
           </Highlight>
         </div>
-        <p className="text-lg font-semibold text-white/90">no Pix</p>
         
         <div className="mt-4 rounded-lg bg-red-600/20 px-4 py-3 text-sm font-bold shadow-lg">
            <p className="font-bold text-red-300">A OFERTA ACABA EM</p>
@@ -84,8 +83,8 @@ export function InvestmentSection() {
         </div>
 
         <div className="mt-8 flex justify-center">
-          <CtaButton asButton onClick={() => setIsPopupOpen(true)}>
-            🎰 GIRAR E REVELAR MEU DESCONTO
+          <CtaButton href="https://pay.kirvano.com/a321493b-b7f4-4bc1-aee7-76ddd61e2c85">
+            Garantir o Acesso Vitálicio!
           </CtaButton>
         </div>
       </div>

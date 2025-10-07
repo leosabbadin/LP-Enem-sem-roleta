@@ -41,9 +41,6 @@ export function BonusSection() {
           </li>
         ))}
       </ul>
-      <p className="mt-6 text-white/85">
-        👉 Esses bônus multiplicam sua preparação e aceleram sua evolução.
-      </p>
 
       <div
         id="offer-summary"

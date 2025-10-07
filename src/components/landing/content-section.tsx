@@ -87,7 +87,7 @@ export function ContentSection() {
       </div>
 
       <div className="mt-10 flex justify-center">
-        <CtaButton href="#investimento">
+        <CtaButton href="#offer-summary">
           <Target /> Desbloquear todo o conteúdo já!
         </CtaButton>
       </div>

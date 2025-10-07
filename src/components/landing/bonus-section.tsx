@@ -123,7 +123,7 @@ export function BonusSection() {
         </div>
 
         <div className="mt-8">
-          <CtaButton href="#investimento">
+          <CtaButton href="#offer-summary">
             <Target /> QUERO MEU ACESSO POR APENAS R$ 22,00!
           </CtaButton>
         </div>

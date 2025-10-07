@@ -63,7 +63,7 @@ export function Header() {
 
         <div className="mt-8 flex justify-center">
           <CtaButton
-            href="#investimento"
+            href="#offer-summary"
             className="text-center"
           >
             <Target /> Quero garantir minha vaga agora

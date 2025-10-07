@@ -80,7 +80,7 @@ export function SolutionSection() {
       </div>
 
       <div className="mt-10 flex justify-center">
-        <CtaButton href="#investimento">
+        <CtaButton href="#offer-summary">
           <Target /> Quero minha Redação Nota 1000 agora
         </CtaButton>
       </div>

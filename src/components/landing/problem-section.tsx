@@ -36,7 +36,7 @@ export function ProblemSection() {
       </div>
 
       <div className="mt-10 flex justify-center">
-        <CtaButton href="#investimento">
+        <CtaButton href="#offer-summary">
           <Target /> Quero parar de errar na redação hoje!
         </CtaButton>
       </div>

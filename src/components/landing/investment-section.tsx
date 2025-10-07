@@ -5,11 +5,25 @@ import { CircleDollarSign, Flame, Gift, TicketPercent } from 'lucide-react';
 import { CtaButton } from './cta-button';
 import { Highlight } from './highlight';
 import { SectionTitle } from './section-title';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { RoulettePopup } from './roulette-popup';
+
+const COUNTDOWN_SECONDS = 5 * 60; // 5 minutes
 
 export function InvestmentSection() {
   const [isPopupOpen, setIsPopupOpen] = useState(false);
+  const [timeLeft, setTimeLeft] = useState(COUNTDOWN_SECONDS);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setTimeLeft((prevTime) => (prevTime > 0 ? prevTime - 1 : 0));
+    }, 1000);
+
+    return () => clearInterval(timer);
+  }, []);
+
+  const minutes = Math.floor(timeLeft / 60);
+  const seconds = timeLeft % 60;
 
   return (
     <section
@@ -62,9 +76,12 @@ export function InvestmentSection() {
         </div>
         <p className="text-lg font-semibold text-white/90">no Pix</p>
         
-        <div className="mt-4 rounded-lg bg-pink-600/20 px-4 py-3 text-sm font-bold shadow-lg">
-          <p className="font-bold">🎯 GIRE A ROLETA E ARRISQUE-SE A GANHAR MAIS DESCONTO!</p>
-          <p className="text-xs font-normal">Pode chegar até 90% OFF</p>
+        <div className="mt-4 rounded-lg bg-red-600/20 px-4 py-3 text-sm font-bold shadow-lg">
+           <p className="font-bold text-red-300">A OFERTA ACABA EM</p>
+          <p className="font-mono text-2xl tracking-widest text-white">
+            {String(minutes).padStart(2, '0')}:
+            {String(seconds).padStart(2, '0')}
+          </p>
         </div>
 
         <div className="mt-8 flex justify-center">

@@ -11,7 +11,6 @@ import { InvestmentSection } from '@/components/landing/investment-section';
 import { GuaranteeSection } from '@/components/landing/guarantee-section';
 import { FinalCtaSection } from '@/components/landing/final-cta-section';
 import { Footer } from '@/components/landing/footer';
-import { OfferSummarySection } from '@/components/landing/offer-summary-section';
 
 export default function Home() {
   return (
@@ -24,7 +23,6 @@ export default function Home() {
         <BonusSection />
         <TestimonialsSection />
         <InvestmentSection />
-        <OfferSummarySection />
         <GuaranteeSection />
         <FinalCtaSection />
       </main>

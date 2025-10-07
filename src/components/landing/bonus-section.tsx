@@ -94,11 +94,11 @@ export function BonusSection() {
           </p>
           <p className="mt-2 text-sm text-white/80 md:mt-4 md:text-lg">MAS HOJE, POR APENAS:</p>
           <div
-            className="font-headline text-6xl font-extrabold tracking-tight sm:text-7xl"
+            className="font-headline text-5xl font-extrabold tracking-tight sm:text-6xl"
             style={{ textShadow: '0 8px 25px rgba(252, 211, 77, 0.4)' }}
           >
             <Highlight>
-              <span className="text-4xl sm:text-5xl">R$</span>22,00
+              <span className="text-3xl sm:text-4xl">R$</span>22,00
             </Highlight>
           </div>
         </div>
@@ -123,7 +123,7 @@ export function BonusSection() {
         </div>
 
         <div className="mt-6 md:mt-8">
-          <CtaButton href="#offer-summary" className="px-6 py-3 text-base md:px-8 md:py-4 md:text-lg">
+          <CtaButton href="https://pay.kirvano.com/a321493b-b7f4-4bc1-aee7-76ddd61e2c85" className="px-6 py-3 text-base md:px-8 md:py-4 md:text-lg">
             <Target /> QUERO MEU ACESSO POR APENAS R$ 22,00!
           </CtaButton>
         </div>

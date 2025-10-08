@@ -98,7 +98,7 @@ export function BonusSection() {
             style={{ textShadow: '0 8px 25px rgba(252, 211, 77, 0.4)' }}
           >
             <Highlight>
-              <span className="text-3xl sm:text-4xl">R$</span>22,00
+              <span className="text-3xl sm:text-4xl">R$</span>19,50
             </Highlight>
           </div>
         </div>
@@ -124,7 +124,7 @@ export function BonusSection() {
 
         <div className="mt-6 md:mt-8">
           <CtaButton href="https://pay.kirvano.com/a321493b-b7f4-4bc1-aee7-76ddd61e2c85" className="px-6 py-3 text-base md:px-8 md:py-4 md:text-lg">
-            <Target /> QUERO MEU ACESSO POR APENAS R$ 22,00!
+            <Target /> QUERO MEU ACESSO POR APENAS R$ 19,50!
           </CtaButton>
         </div>
       </div>

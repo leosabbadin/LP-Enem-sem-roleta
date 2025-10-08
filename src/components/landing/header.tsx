@@ -4,6 +4,7 @@ import { CtaButton } from './cta-button';
 import { Highlight } from './highlight';
 import { Pill } from './pill';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
+import Image from 'next/image';
 
 export function Header() {
   const heroImage = PlaceHolderImages.find((img) => img.id === 'hero-background');
@@ -12,25 +13,24 @@ export function Header() {
   return (
     <header className="relative overflow-hidden">
       {heroImage && (
-        <div
-          style={{
-            backgroundImage: `url('${heroImage.imageUrl}')`,
-          }}
-          className="absolute inset-0 hidden bg-cover bg-center md:block"
-          role="img"
-          aria-label={heroImage.description}
+         <Image
+          src={heroImage.imageUrl}
+          alt={heroImage.description}
+          fill
+          priority
+          quality={75}
+          className="hidden object-cover object-center md:block"
           data-ai-hint={heroImage.imageHint}
         />
       )}
       {heroImageMobile && (
-        <div
-          style={{
-            backgroundImage: `url('${heroImageMobile.imageUrl}')`,
-            backgroundPosition: 'center 20%',
-          }}
-          className="absolute inset-0 bg-cover md:hidden"
-          role="img"
-          aria-label={heroImageMobile.description}
+         <Image
+          src={heroImageMobile.imageUrl}
+          alt={heroImageMobile.description}
+          fill
+          priority
+          quality={75}
+          className="block object-cover object-center md:hidden"
           data-ai-hint={heroImageMobile.imageHint}
         />
       )}

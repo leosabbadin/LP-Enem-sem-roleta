@@ -18,6 +18,11 @@ export function TestimonialsSection() {
     'https://raw.githubusercontent.com/leosabbadin/imagem/6f07e79859b98373d89691006aee3f95e4c6218a/7.png',
     'https://raw.githubusercontent.com/leosabbadin/imagem/6f07e79859b98373d89691006aee3f95e4c6218a/8.png',
     'https://raw.githubusercontent.com/leosabbadin/imagem/6f07e79859b98373d89691006aee3f95e4c6218a/9.png',
+    'https://raw.githubusercontent.com/leosabbadin/imagem/9fe375b958a22aaecd95edc6baa301861510adab/img_0136%20(5).png',
+    'https://raw.githubusercontent.com/leosabbadin/imagem/9fe375b958a22aaecd95edc6baa301861510adab/img_0136%20(6).png',
+    'https://raw.githubusercontent.com/leosabbadin/imagem/9fe375b958a22aaecd95edc6baa301861510adab/img_0136%20(7).png',
+    'https://raw.githubusercontent.com/leosabbadin/imagem/9fe375b958a22aaecd95edc6baa301861510adab/img_0136%20(8).png',
+    'https://raw.githubusercontent.com/leosabbadin/imagem/9fe375b958a22aaecd95edc6baa301861510adab/img_0136%20(9).png',
   ];
 
   return (

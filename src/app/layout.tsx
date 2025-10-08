@@ -1,8 +1,21 @@
 import type { Metadata } from 'next';
-import Script from 'next/script'; // 1. Importado o componente Script
+import Script from 'next/script';
+import { Inter, Space_Grotesk } from 'next/font/google';
 import './globals.css';
 import { Toaster } from '@/components/ui/toaster';
 import { WhatsAppButton } from '@/components/landing/whatsapp-button';
+import { cn } from '@/lib/utils';
+
+const inter = Inter({
+  subsets: ['latin'],
+  variable: '--font-inter',
+});
+
+const spaceGrotesk = Space_Grotesk({
+  subsets: ['latin'],
+  weight: '700',
+  variable: '--font-space-grotesk',
+});
 
 export const metadata: Metadata = {
   title: 'Hackeando a Redação do ENEM',
@@ -18,23 +31,20 @@ export default function RootLayout({
   return (
     <html lang="pt-BR" className="dark scroll-smooth">
       <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link
-          rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossOrigin="anonymous"
-        />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Space+Grotesk:wght@700&display=swap"
-          rel="stylesheet"
-        />
+        {/* Fontes do Google foram removidas daqui e otimizadas com next/font */}
       </head>
-      <body className="font-body antialiased">
+      <body
+        className={cn(
+          'font-body antialiased',
+          inter.variable,
+          spaceGrotesk.variable
+        )}
+      >
         {children}
         <WhatsAppButton />
         <Toaster />
 
-        {/* 2. CÓDIGO DO SEU PIXEL ADICIONADO AQUI */}
+        {/* CÓDIGO DO SEU PIXEL ADICIONADO AQUI */}
         <Script id="meta-pixel" strategy="afterInteractive">
           {`
             !function(f,b,e,v,n,t,s)

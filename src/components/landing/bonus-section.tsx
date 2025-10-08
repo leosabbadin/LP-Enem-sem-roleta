@@ -106,7 +106,7 @@ export function BonusSection() {
         <div className="mt-4 rounded-xl bg-green-500/10 p-2 ring-1 ring-inset ring-green-500/20 md:p-4">
           <p className="font-bold text-white text-xs md:text-base">
             Isso mesmo, você economiza{' '}
-            <span className="text-green-300">R$ 360,90</span> (mais de 94% de
+            <span className="text-green-300">R$ 363,40</span> (mais de 94% de
             desconto) levando tudo hoje!
           </p>
         </div>
